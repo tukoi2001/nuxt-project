@@ -1,4 +1,6 @@
 {
   "welcome": "Welcome Nuxtjs 3",
-  "back_to_home": "Back to Home"
+  "back_to_home": "Back to Home",
+  "cancel": "Cancel",
+  "confirm": "Confirm"
 }
