@@ -1,7 +1,6 @@
 <template>
   <div class="sign-up">
     <div class="sign-up__wrapper">
-      Sign Up
       <ElForm class="sign-up">
         <FieldText
           v-model="value"

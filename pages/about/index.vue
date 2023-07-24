@@ -12,6 +12,10 @@
           <NuxtLink :to="`/about/${post.id}`">See Details more...</NuxtLink>
         </div>
       </div>
+      <TheButton :on-click="showDialog" />
+      <TheDialog v-model="isShowDialog" title="Dialog">
+        This is a dialog
+      </TheDialog>
     </div>
   </div>
 </template>
@@ -19,6 +23,12 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 const router = useRouter();
+
+const isShowDialog = ref<boolean>(false);
+
+const showDialog = () => {
+  isShowDialog.value = true;
+};
 
 const posts = [
   {
