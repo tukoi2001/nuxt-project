@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import ElementPlus from "unplugin-element-plus/vite";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  build: {
+    transpile: ["element-plus/es"],
+  },
   components: {
     global: true,
     dirs: ["~/components"],
@@ -14,16 +19,17 @@ export default defineNuxtConfig({
     upperAfterPrefix: false,
   },
   elementPlus: {
-    importStyle: "scss",
+    importStyle: "css",
   },
   i18n: {
     vueI18n: "./i18n.config.ts",
   },
   vite: {
+    plugins: [ElementPlus({})],
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/styles/main.scss" as *;',
+          additionalData: '@use "@/assets/styles/main.scss" as *;',
         },
       },
     },

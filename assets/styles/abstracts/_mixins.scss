@@ -1,0 +1,17 @@
+@mixin style-text-base(
+  $color: $primary-color,
+  $font-size: 14px,
+  $font-weight: 400,
+  $line-height: 20px
+) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin flex-box($justifyContent: center, $alignItems: center) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
