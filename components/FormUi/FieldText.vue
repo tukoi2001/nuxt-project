@@ -140,6 +140,7 @@ const id = computed<string>(() => useId().value);
 
   .el-form-item {
     width: 100%;
+    margin-bottom: 22px;
   }
 
   &__label {
