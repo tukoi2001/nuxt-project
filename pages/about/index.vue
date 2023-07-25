@@ -13,9 +13,9 @@
         </div>
       </div>
       <TheButton :on-click="showDialog" />
-      <TheDialog v-model="isShowDialog" title="Dialog">
-        This is a dialog
-      </TheDialog>
+      <DialogCommonDialog v-model="isShowDialog" title="Dialog">
+        This is a dialog</DialogCommonDialog
+      >
     </div>
   </div>
 </template>

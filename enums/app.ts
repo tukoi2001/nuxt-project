@@ -9,3 +9,10 @@ export enum InputType {
   PASSWORD = "password",
   TEXTAREA = "textarea",
 }
+
+export enum ToastEnum {
+  SUCCESS = "success",
+  ERROR = "error",
+  INFO = "info",
+  WARNING = "warning",
+}

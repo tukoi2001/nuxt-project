@@ -159,9 +159,6 @@ const id = computed<string>(() => useId().value);
 }
 
 :deep(.el-input__wrapper) {
-  height: 100%;
-  width: 100%;
-
   input {
     height: 32px;
     width: 100%;

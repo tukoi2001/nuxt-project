@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     upperAfterPrefix: false,
   },
   elementPlus: {
-    importStyle: "css",
+    importStyle: "scss",
   },
   i18n: {
     vueI18n: "./i18n.config.ts",

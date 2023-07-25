@@ -1,0 +1,69 @@
+.el-notification {
+  $root: &;
+  padding: 10px 16px;
+  border: unset;
+  outline: unset;
+  width: 395px;
+  max-width: 395px;
+  border-radius: 4px;
+  box-shadow: none;
+
+  &__success {
+    background-color: $green-1 !important;
+    border: 1px solid $green-4 !important;
+
+    & #{$root}__content {
+      & > p {
+        color: $green-4;
+      }
+    }
+  }
+
+  &__error {
+    background-color: $red-1 !important;
+    border: 1px solid $red-3 !important;
+
+    & #{$root}__content {
+      & > p {
+        color: $red-3;
+      }
+    }
+  }
+
+  &__info {
+    background-color: $blue-1 !important;
+    border: 1px solid $blue-3 !important;
+
+    & #{$root}__content {
+      & > p {
+        color: $blue-3;
+      }
+    }
+  }
+
+  &__warning {
+    background-color: $yellow-1 !important;
+    border: 1px solid $yellow-4 !important;
+
+    & #{$root}__content {
+      & > p {
+        color: $yellow-4;
+      }
+    }
+  }
+
+  &__group {
+    margin: 0 8px;
+  }
+
+  &__content {
+    --el-notification-content-font-size: 14px;
+    display: inline-flex;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  & #{$root}__closeBtn {
+    top: 14px;
+  }
+}
