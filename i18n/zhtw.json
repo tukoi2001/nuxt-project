@@ -3,5 +3,21 @@
   "back_to_home": "Back to Home",
   "cancel": "Cancel",
   "confirm": "Confirm",
-  "sign_up": "Sign Up"
+  "sign_up": "Sign Up",
+  "sign_in": "Sign In",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "email": "Email",
+  "password": "Password",
+  "confirm_password": "Confirm Password",
+  "already_an_account": "Already an account!",
+  "email_form": "{field} is not a valid email.",
+  "required_form": "{field} is required.",
+  "max_length_form": "{field} should not be greater than {max} characters.",
+  "min_length_form": "{field} should not be less than {min} characters.",
+  "password_does_not_match": "Password does not match",
+  "not_a_member": "Not a member?",
+  "forgot_password": "Forgot password!",
+  "reset_password": "Reset Password",
+  "password_recovery": "Password Recovery"
 }

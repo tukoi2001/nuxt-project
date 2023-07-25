@@ -7,7 +7,7 @@
         :model="formData"
         :rules="rules"
         class="sign-up"
-        @submit.prevent="onSignIn"
+        @submit.prevent="onSignUp"
       >
         <div class="sign-up__item">
           <FormUiFieldText
@@ -84,7 +84,7 @@
       </ElForm>
       <NuxtLink to="/sign-in" class="sign-up__redirect">
         {{ t("already_an_account") }}
-        <span>{{ t("login") }}</span>
+        <span>{{ t("sign_in") }}</span>
       </NuxtLink>
     </div>
   </div>
@@ -202,7 +202,7 @@ const isValid = computed<boolean>(() => {
 });
 
 // eslint-disable-next-line require-await
-const onSignIn = async (): Promise<void> => {
+const onSignUp = async (): Promise<void> => {
   try {
     isLoading.value = true;
     //

@@ -6,4 +6,8 @@ export declare namespace Auth {
     password: string;
     confirmPassword: string;
   };
+
+  type SignInForm = Pick<SignUpForm, "email" | "password">;
+
+  type ForgetPasswordForm = Pick<SignInForm, "email">;
 }
