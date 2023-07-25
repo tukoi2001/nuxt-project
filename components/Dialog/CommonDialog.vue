@@ -7,6 +7,7 @@
       :width="width"
       :close-on-click-modal="closeOnClickModal"
       :show-close="showClose"
+      align-center
     >
       <template v-if="!!$slots.header" #header>
         <slot name="header"></slot>

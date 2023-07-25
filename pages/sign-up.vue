@@ -2,14 +2,14 @@
   <div class="sign-up">
     <div class="sign-up__wrapper">
       <ElForm class="sign-up">
-        <FieldText
+        <FormFieldText
           v-model="value"
           label="Email"
           :type="InputType.TEXT"
           placeholder="Email"
         >
           <template #prepend>ab</template>
-        </FieldText>
+        </FormFieldText>
       </ElForm>
     </div>
   </div>
