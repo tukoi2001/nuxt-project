@@ -19,7 +19,7 @@ const redirectToHome = (): void => {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-image: url("@/public/images/bg.png");
+  background-image: url("/images/bg.png");
   background-position: center center;
   background-size: cover;
   overflow-y: auto;
