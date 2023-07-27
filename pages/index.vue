@@ -1,7 +1,10 @@
 <template>
   <div class="index-page">
-    <div class="index-page__title">Home</div>
-    <div>{{ t("welcome") }}</div>
+    <HomeBanner />
+    <HomeOurServices />
+    <HomeContactUs />
+    <HomeServiceMap />
+    <HomeSubscribe />
   </div>
 </template>
 
@@ -10,11 +13,10 @@ useHead({
   title: "Home | Nuxt Project",
   // meta: []
 });
-
-const { t } = useI18n();
 </script>
 
 <style lang="scss" scoped>
 .index-page {
+  position: relative;
 }
 </style>

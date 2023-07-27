@@ -11,6 +11,7 @@
     @click="onClick"
   >
     {{ label }}
+    <slot v-if="$slots.append" name="append"></slot>
   </ElButton>
 </template>
 
@@ -82,5 +83,9 @@ defineProps({
   height: 40px;
   padding: 8px 20px;
   cursor: pointer;
+}
+
+:deep(.el-icon) {
+  margin-left: 8px;
 }
 </style>
