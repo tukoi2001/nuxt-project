@@ -49,7 +49,7 @@ definePageMeta({
   layout: "auth",
 });
 useHead({
-  title: "Sign In | Nuxt Project",
+  title: "Forgot Password | Nuxt Project",
 });
 const { t } = useI18n();
 const formRef = ref<FormInstance>();

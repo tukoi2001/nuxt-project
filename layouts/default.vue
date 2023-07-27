@@ -1,13 +1,15 @@
 <template>
-  <div class="auth-layout">
+  <div class="default-layout">
+    <TopSideBar />
     <slot></slot>
+    <TheFooter />
   </div>
 </template>
 
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
-.auth-layout {
+.default-layout {
   width: 100vw;
   height: 100vh;
   position: relative;

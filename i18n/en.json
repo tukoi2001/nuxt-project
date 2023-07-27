@@ -19,5 +19,15 @@
   "not_a_member": "Not a member?",
   "forgot_password": "Forgot password!",
   "reset_password": "Reset Password",
-  "password_recovery": "Password Recovery"
+  "password_recovery": "Password Recovery",
+  "home": "Home",
+  "services": "Services",
+  "about": "About",
+  "pages": "Pages",
+  "blogs": "Blogs",
+  "contact": "Contact",
+  "newsletter": "Newsletter",
+  "newsletter_des_1": "Subscribe to our newsletter to keep up to date on our marketing, website, design services, and tips.",
+  "newsletter_des_2": "We hate spam as much as you do. We will never, ever send you such emails.",
+  "submit": "Submit"
 }
