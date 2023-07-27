@@ -3,13 +3,24 @@ import ElementPlus from "unplugin-element-plus/vite";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  app: {
+    head: {
+      title: "Nuxt Project",
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      meta: [
+        { name: "description", content: "This is Nuxt project description" },
+      ],
+      // link: [{ rel: "stylesheet", href: "..." }], // link tag
+    },
+  },
+  runtimeConfig: {
+    // Env
+  },
   build: {
     transpile: ["element-plus/es"],
   },
-  components: {
-    global: true,
-    dirs: ["~/components"],
-  },
+  components: true,
   modules: ["@pinia/nuxt", "nuxt-lodash", "@element-plus/nuxt", "@nuxtjs/i18n"],
   pinia: {
     autoImports: ["defineStore", ["defineStore", "definePiniaStore"]],

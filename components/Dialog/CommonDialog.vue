@@ -16,8 +16,8 @@
         <slot></slot>
       </template>
       <template #footer>
-        <TheButton :label="t('cancel')" @click="onCloseModal" />
-        <TheButton
+        <ButtonTheButton :label="t('cancel')" @click="onCloseModal" />
+        <ButtonTheButton
           :label="t('confirm')"
           type="primary"
           :loading="isLoading"

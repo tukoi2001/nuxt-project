@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBarExample />
     <div>About Page</div>
     <div>
       <div>{{ t("welcome") }}</div>
@@ -12,7 +11,7 @@
           <NuxtLink :to="`/about/${post.id}`">See Details more...</NuxtLink>
         </div>
       </div>
-      <TheButton :on-click="showDialog" />
+      <ButtonTheButton :on-click="showDialog" />
       <DialogCommonDialog v-model="isShowDialog" title="Dialog">
         This is a dialog</DialogCommonDialog
       >
@@ -21,6 +20,8 @@
 </template>
 
 <script lang="ts" setup>
+import useSWRV from "swrv";
+import fetcher from "@/api/app";
 const { t } = useI18n();
 const router = useRouter();
 
@@ -46,6 +47,29 @@ const posts = [
 const onShowDetailPost = (id: string): void => {
   router.push({ path: `/about/${id}` });
 };
+
+const fetchCountries = () => {
+  const url = `https://esg-gateway-diginex.qa.dgnx.io/system/countries?sortBy=id`;
+  const { data, error, isValidating } = useSWRV<any[]>(url, fetcher);
+  // eslint-disable-next-line no-console
+  console.log(data.value, "swrv");
+  return {
+    isLoading: isValidating,
+    data,
+    error,
+  };
+};
+
+const fetchCountryAxios = async () => {
+  const users = await $fetch(
+    "https://esg-gateway-diginex.qa.dgnx.io/system/countries?sortBy=id",
+  );
+  // eslint-disable-next-line no-console
+  console.log(users, "axios");
+};
+
+fetchCountries();
+fetchCountryAxios();
 </script>
 
 <style lang="scss" scoped>
