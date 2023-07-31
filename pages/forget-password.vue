@@ -52,6 +52,7 @@ useHead({
   title: "Forgot Password | Nuxt Project",
 });
 const { t } = useI18n();
+const client = useSupabaseAuthClient();
 const formRef = ref<FormInstance>();
 const isLoading = ref<boolean>(false);
 const formData = reactive<Auth.ForgetPasswordForm>({
@@ -82,13 +83,16 @@ const isValid = computed<boolean>(() => {
   return !hasError;
 });
 
-// eslint-disable-next-line require-await
 const onResetPassword = async (): Promise<void> => {
   try {
     isLoading.value = true;
-    //
-  } catch (error) {
-    //
+    const { error } = await client.auth.resetPasswordForEmail(formData.email);
+    if (error) {
+      showError(error as unknown as string);
+    }
+    navigateTo("/");
+  } catch (error: any) {
+    showError(error.error_description);
   } finally {
     isLoading.value = false;
   }

@@ -1,8 +1,10 @@
 <template>
   <div class="default-layout">
-    <TopSideBar />
-    <slot></slot>
-    <TheFooter />
+    <ElScrollbar>
+      <TopSideBar />
+      <slot></slot>
+      <TheFooter />
+    </ElScrollbar>
   </div>
 </template>
 

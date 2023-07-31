@@ -16,6 +16,7 @@
     "@element-plus/nuxt": "^1.0.5",
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/supabase": "^0.3.8",
     "@types/node": "^18.16.19",
     "@typescript-eslint/parser": "^6.0.0",
     "element-plus": "^2.3.8",
@@ -32,6 +33,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/i18n": "^8.0.0-beta.13",
     "@pinia/nuxt": "^0.4.11",
+    "@supabase/supabase-js": "^2.31.0",
     "nuxt-lodash": "^2.5.0",
     "pinia": "^2.1.4",
     "swrv": "^0.9.6"

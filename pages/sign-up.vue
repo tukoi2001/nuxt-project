@@ -96,6 +96,7 @@ import Schema from "async-validator";
 
 import { Auth } from "@/types/auth";
 import { InputType } from "@/enums/app";
+import { showError, showInfo } from "@/components/Toast";
 
 definePageMeta({
   layout: "auth",
@@ -104,6 +105,8 @@ useHead({
   title: "Sign Up | Nuxt Project",
 });
 const { t } = useI18n();
+const user = useSupabaseUser();
+const client = useSupabaseAuthClient();
 const formRef = ref<FormInstance>();
 const isLoading = ref<boolean>(false);
 const formData = reactive<Auth.SignUpForm>({
@@ -201,13 +204,32 @@ const isValid = computed<boolean>(() => {
   return !hasError;
 });
 
-// eslint-disable-next-line require-await
+watchEffect(async () => {
+  if (user.value) {
+    await navigateTo("/");
+  }
+});
+
 const onSignUp = async (): Promise<void> => {
   try {
     isLoading.value = true;
-    //
-  } catch (error) {
-    //
+    await client.auth.signUp({
+      email: formData.email,
+      password: formData.password,
+      options: {
+        data: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          address: "",
+          phoneNumber: "",
+          avatar: "",
+        },
+      },
+    });
+    showInfo("Please check your email to confirm your account");
+    navigateTo("/sign-in");
+  } catch (error: any) {
+    showError(error);
   } finally {
     isLoading.value = false;
   }

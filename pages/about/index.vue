@@ -16,6 +16,7 @@
         This is a dialog</DialogCommonDialog
       >
     </div>
+    <ButtonTheButton :on-click="handleLogout" label="Logout" />
   </div>
 </template>
 
@@ -24,11 +25,16 @@ import useSWRV from "swrv";
 import fetcher from "@/api/app";
 const { t } = useI18n();
 const router = useRouter();
+const client = useSupabaseAuthClient();
 
 const isShowDialog = ref<boolean>(false);
 
 const showDialog = () => {
   isShowDialog.value = true;
+};
+
+const handleLogout = () => {
+  client.auth.signOut();
 };
 
 const posts = [
