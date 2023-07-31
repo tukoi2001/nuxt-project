@@ -21,7 +21,13 @@ export default defineNuxtConfig({
     transpile: ["element-plus/es"],
   },
   components: true,
-  modules: ["@pinia/nuxt", "nuxt-lodash", "@element-plus/nuxt", "@nuxtjs/i18n"],
+  modules: [
+    "@pinia/nuxt",
+    "nuxt-lodash",
+    "@element-plus/nuxt",
+    "@nuxtjs/i18n",
+    "@nuxtjs/supabase",
+  ],
   pinia: {
     autoImports: ["defineStore", ["defineStore", "definePiniaStore"]],
   },

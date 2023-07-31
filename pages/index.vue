@@ -13,6 +13,9 @@ useHead({
   title: "Home | Nuxt Project",
   // meta: []
 });
+definePageMeta({
+  middleware: ["auth"],
+});
 </script>
 
 <style lang="scss" scoped>
